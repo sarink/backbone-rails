@@ -5,9 +5,10 @@
         template: JST["<%= jst 'new' %>"],
 
         initialize: function() {
+            // this.model.on("change:errors", this.render, this);
             var self = this;
             self.model.bind("change:errors", function() {
-                return self;
+                return self.render();
             });
         },
         
@@ -21,8 +22,7 @@
             
             this.model.unset("errors");
             return this.collection.create(this.model.toJSON(), {
-                success: function(<%= singular_name %>) {
-                    var model = <%= singular_name %>;
+                success: function(model) {
                     return window.location.hash = "/" + model.id;
                 },
                 error: funtion(<%= singular_name %>, jqXHR) {
