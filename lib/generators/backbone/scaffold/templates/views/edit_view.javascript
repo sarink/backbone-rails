@@ -13,11 +13,10 @@
             e.stopPropagation();
             
             return this.model.save(null, {
-                success: function(<%= singular_name %>) {
-                    var model = <%= singular_name %>;
+                success: function(model) {
                     return window.location.hash = "/" + model.id;
                 }
-            })
+            });
         },
         
         render: function() {
