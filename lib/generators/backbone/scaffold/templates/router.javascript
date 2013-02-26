@@ -1,8 +1,8 @@
 (function() {
     <%= router_namespace %>Router = Backbone.Router.extend({
         initialize: function(options) {
-            this.<%= plural_model_name %> = new <%= collection_namespace>Collection();
-            return this.<%= plural_model_name %>.reset(options.<%= plural_model_name %>);
+            var <%= plural_model_name %> = new <%= collection_namespace>Collection();
+            return <%= plural_model_name %>.reset(options.<%= plural_model_name %>);
         },
 
         routes: {
