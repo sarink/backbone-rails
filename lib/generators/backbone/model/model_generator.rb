@@ -12,7 +12,7 @@ module Backbone
     
       def create_backbone_model
         template "model.coffee", "#{backbone_path}/models/coffee/#{file_name}.js.coffee"
-        template "model.js", "#{backbone_path}/models/#{file_name}.js"
+        template "model.javascript", "#{backbone_path}/models/#{file_name}.js"
       end
     
     end
