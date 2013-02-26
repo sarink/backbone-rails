@@ -1,7 +1,7 @@
 (function() {
-    <%= view.namespace %> = <%= view.namespace %> || {};
+    <%= view_namespace %> = <%= view_namespace %> || {};
     
-    <%= view.namespace %>.ShowView = Backbone.View.extend({
+    <%= view_namespace %>.ShowView = Backbone.View.extend({
         template: JST["<%= jst 'show' %>"],
 
         render: function() {
