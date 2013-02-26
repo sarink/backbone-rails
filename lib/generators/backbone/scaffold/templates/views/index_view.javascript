@@ -1,5 +1,5 @@
 (function() {
-    <%= view.namespace %> = <%= view.namespace %> || {};
+    <%= view_namespace %> = <%= view_namespace %> || {};
     
     <%= view.namespace %>.IndexView = Backbone.View.extend({
         template: JST["<%= jst 'index' %>"],
