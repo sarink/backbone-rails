@@ -1,7 +1,7 @@
 (function() {
-    <%= view.namespace %> = <%= view.namespace %> || {};
+    <%= view_namespace %> = <%= view_namespace %> || {};
     
-    <%= view.namespace %>.<%= singular_name.camelize %>View = Backbone.View.extend({
+    <%= view_namespace %>.<%= singular_name.camelize %>View = Backbone.View.extend({
         template: JST["<%= jst singular_name %>"],
         
         events: {
