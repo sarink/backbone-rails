@@ -17,16 +17,17 @@
         },
         
         save: function(e) {
+            var self = this;
             e.preventDefault();
             e.stopPropagation();
             
-            this.model.unset("errors");
-            return this.collection.create(this.model.toJSON(), {
+            self.model.unset("errors");
+            return self.collection.create(self.model.toJSON(), {
                 success: function(model) {
                     return window.location.hash = "/" + model.id;
                 },
                 error: funtion(<%= singular_name %>, jqXHR) {
-                    return this.model.set({errors: $.parseJSON(jqXHR.responseText)});
+                    return self.model.set({errors: $.parseJSON(jqXHR.responseText)});
                 }
             });
         },
