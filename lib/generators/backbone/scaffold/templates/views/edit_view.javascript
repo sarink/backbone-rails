@@ -1,7 +1,7 @@
 (function() {
     <%= view_namespace %> = <%= view_namespace %> || {};
     
-    <%= view.namespace %>.EditView = Backbone.View.extend({
+    <%= view_namespace %>.EditView = Backbone.View.extend({
         template: JST["<%= jst 'edit' %>"],
         
         events: {
