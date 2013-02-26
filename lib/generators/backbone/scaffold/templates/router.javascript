@@ -24,13 +24,13 @@
         },
 
         show: function(id) {
-            var <%= singular_name %> = this.@<%= plural_name %>.get(id);
+            var <%= singular_name %> = this.<%= plural_name %>.get(id);
             var view = new <%= "#{view_namespace}.ShowView({model: #{singular_name}})" %>;
             return $("#<%= plural_name %>").html(view.render().el);
         },
 
         edit: function(id) {
-            var <%= singular_name %> = @<%= plural_name %>.get(id);
+            var <%= singular_name %> = this.<%= plural_name %>.get(id);
             var view = new <%= "#{view_namespace}.EditView({model: #{singular_name}})" %>;
             return $("#<%= plural_name %>").html(view.render().el);
         }
