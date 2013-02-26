@@ -11,7 +11,7 @@
             ":id/edit"  :   "edit",
             ":id"       :   "show",
             ".*"        :   "index"
-        }
+        },
 
         new<%= class_name %>: function() {
             var view = new <%= "#{view_namespace}.NewView({collection: this.#{plural_name}})" %>;
