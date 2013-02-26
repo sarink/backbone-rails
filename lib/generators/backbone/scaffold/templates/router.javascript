@@ -13,6 +13,11 @@
             ".*"        :   "index"
         }
 
+        new<%= class_name %>: function() {
+            var view = new <%= "#{view_namespace}.NewView(collection: @#{plural_name})" %>;
+            $("#<%= plural_name %>").html(view.render().el);
+        },
+
         index: function() {
             var view = new <%= "#{view_namespace}.IndexView(#{plural_name}: @#{plural_name})" %>;
             $("#<%= plural_name %>").html(view.render().el);
