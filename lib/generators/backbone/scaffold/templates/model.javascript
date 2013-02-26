@@ -1,5 +1,7 @@
 (function() {
     <%= model_namespace %> = Backbone.Model.extend({
+        paramRoot: "<%= singular_table_name %>",
+
         defaults: function() {
             return {
                 <% attributes.each do |attribute| -%>
